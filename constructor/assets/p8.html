@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Custom Constructur</h3>
+
+    <script>
+        //class constructor/function constructor
+        function Car() { //internally this keyword
+            var x = 13;
+            this.title = "Jeep";
+            this.model = 2021;
+            this.fuel = "Petrol";
+            this.color = "red";
+            this.display = function(){
+                document.write(`<h3> display function </h3>`);
+            }
+        }
+
+        /* ref/ instance of constructor*/
+        var a = new Car();//user defined constructor
+  //externally instance
+        console.log(a);
+
+        document.write(`<h3> ${a.title}</h3>`);//instance.key
+        document.write(`<h3> ${a["model"]}<h3>`);//instance['key']
+        document.write(`<h3> ${a.fuel}<h3>`);//instance.key
+        document.write(`<h3> ${a.color}<h3>`);//instance.key
+        a.display();
+    </script>
+</body>
+</html>

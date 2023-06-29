@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+      Marks = 70-100(A) 50-70(B) 35-50(C) ==35(D),Fail
+    </h1>
+      <form onclick="submitAnswer(event)">
+        <div>
+            <label for="mark">Enter the MArks</label>
+            <input type="number" name="mark" id="mark" required>
+        </div>
+        <button type="submit">Submit</button>
+        </form>
+        <div id="result"></div>
+    <script>
+        function submitAnswer(event){
+            event.preventDefault();// avoid page refresh
+            var marks = document.getElementById('mark').value;
+
+            var res;
+
+            if (marks >= 70 || marks <= 100){
+                res = 'A';
+                document.getElementById('result').innerHTML = `<h1> the grade is =${res} </h1>`;
+            }
+            else if(marks >=50 || marks < 70){
+                res = 'B';
+                document.getElementById('result').innerHTML = `<h1> the grade is =${res} </h1>`;
+            }
+            else if(marks =35 || marks < 50){
+                res = 'C';
+                document.getElementById('result').innerHTML =`<h1> the grade is =${res} </h1>`;
+            }
+            else if(marks === 35){
+                res = 'D';
+                    document.getElementById('result').innerHTML = `<h1> the grade is =${res} </h1>`;
+            }
+            else{
+                    document.getElementById('result').innerHTML = `<h1> the grade is FAil </h1>`;
+            }
+        }
+    </script>
+</body>
+</html>

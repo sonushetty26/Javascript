@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Custom Constructor</h3>
+
+    <script>
+        function Sonu(){
+            var x = 12;
+            this.name = "sonu";
+            this.age = 22;
+            this.num = 9742829558;
+            this.display = function(){
+                document.write(`<h3> display function </h3>`);
+            }
+        }
+
+        var a = new Sonu();
+
+            console.log(a);
+            document.write(`<h3> ${a.name}</h3>`);//instance.key
+            document.write(`<h3> ${a.age}<h3>`);//instance.key
+            document.write(`<h3> ${a["num"]}<h3>`);//instance['key']
+            a.display();
+        
+    </script>
+</body>
+</html>
